@@ -1,1 +1,2 @@
-Maven\BDD\AppTest.class
+steps\StepDefinition.class
+runner\LoginRunner.class

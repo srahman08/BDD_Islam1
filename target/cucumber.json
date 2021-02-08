@@ -1,9 +1,9 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "line": 3,
+        "line": 4,
         "name": "",
         "description": "",
         "type": "background",
@@ -11,10 +11,10 @@
         "steps": [
           {
             "result": {
-              "duration": 326382700,
+              "duration": 4130624100,
               "status": "passed"
             },
-            "line": 4,
+            "line": 5,
             "name": "User is on the Techfios Login page",
             "match": {
               "location": "StepDefinition.User_is_on_the_Techfios_Login_page()"
@@ -24,57 +24,95 @@
         ]
       },
       {
-        "line": 6,
-        "name": "User should be able to login with valid credentials",
+        "before": [
+          {
+            "result": {
+              "duration": 2559680200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinition.beforeRun()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "1 User should be able to login with valid credentials",
         "description": "",
-        "id": "validate-techfios-login-functionality;user-should-be-able-to-login-with-valid-credentials",
+        "id": "validate-techfios-login-functionality;1-user-should-be-able-to-login-with-valid-credentials;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 832181900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinition.tearDown()"
+            }
+          }
+        ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 10063700,
+              "duration": 325634400,
               "status": "passed"
             },
-            "line": 8,
-            "name": "User enters username as \"demo@techfios.com\"",
+            "line": 10,
+            "name": "User enters \"demo@techfios.com\" and \"abc123\"",
             "match": {
               "arguments": [
                 {
                   "val": "demo@techfios.com",
-                  "offset": 25
+                  "offset": 13
+                },
+                {
+                  "val": "abc123",
+                  "offset": 37
                 }
               ],
-              "location": "StepDefinition.User_enters_username_as(String)"
+              "location": "StepDefinition.user_enters_userName_and_password(String,String)"
             },
+            "matchedColumns": [
+              0,
+              1
+            ],
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 4479129200,
+              "status": "passed"
             },
-            "line": 9,
-            "name": "User enters password as \"abc123\"",
-            "match": {},
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 10,
+            "line": 11,
             "name": "User clicks on signin button",
-            "match": {},
+            "match": {
+              "location": "StepDefinition.User_clicks_on_signin_button()"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 362268800,
+              "error_message": "junit.framework.ComparisonFailure: expected:\u003c[Login]- iBilling\u003e but was:\u003c[Dashboard]- iBilling\u003e\r\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\r\n\tat steps.StepDefinition.User_should_land_on_Dashboard_page(StepDefinition.java:58)\r\n\tat ✽.Then User should land on Dashboard page(features/AlternateWayLogin.feature:12)\r\n",
+              "status": "failed"
             },
-            "line": 11,
+            "line": 12,
             "name": "User should land on Dashboard page",
-            "match": {},
+            "match": {
+              "location": "StepDefinition.User_should_land_on_Dashboard_page()"
+            },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 7,
+            "name": "@Scenario1"
+          },
+          {
+            "line": 1,
+            "name": "@AlternateLogin"
           }
         ]
       }
@@ -83,6 +121,12 @@
     "description": "",
     "id": "validate-techfios-login-functionality",
     "keyword": "Feature",
-    "uri": "features/Login.feature"
+    "uri": "features/AlternateWayLogin.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@AlternateLogin"
+      }
+    ]
   }
 ]

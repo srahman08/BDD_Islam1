@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="classpath:features",
 		glue ="steps",
-	//	tags = "",
+	    tags = "@AlternateLogin",
 		monochrome = true,
 		dryRun = false,
 		plugin = {
